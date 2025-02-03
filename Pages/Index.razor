@@ -1,9 +1,45 @@
 ﻿@page "/"
 
+@using TechNews.Data
+@inject RssFeedService RssFeedService
+
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>The Latest Hot News on Machine Learning and AI</h1>
 
-Welcome to your new app.
+@if (articles == null)
+{
+    <p>Loading...</p>
+}
+else if (articles.Count == 0)
+{
+    <p>No articles found.</p>
+}
+else
+{
+    <div>
+        @foreach (var article in articles)
+        {
+            <div class="article-item ps-2 pe-2">
+                <h2>@article.Title</h2>
+                <p>@article.Description</p>
+                <p><a href="@article.Link" target="_blank">Read more</a></p>
+                @if (!string.IsNullOrEmpty(article.Thumbnail))
+                {
+                    <img src="@article.Thumbnail" alt="Thumbnail" />
+                }
+                <p><strong>Category:</strong> @article.Category</p>
+                <p><strong>Published:</strong> @article.PubDate</p>
+            </div>
+        }
+    </div>
+}
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    private List<Article> articles;
+
+    protected override async Task OnInitializedAsync()
+    {
+        articles = await RssFeedService.GetRssFeedAsync();
+    }
+}

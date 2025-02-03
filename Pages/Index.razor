@@ -3,9 +3,14 @@
 @using TechNews.Data
 @inject RssFeedService RssFeedService
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Tech News</PageTitle>
 
-<h1>The Latest Hot News on Machine Learning and AI</h1>
+<div class="header-title">The Latest News and Updates on Machine Learning and AI</div>
+
+<div class="author">
+    This web service was created by Brian Ravn Pedersen. The tech news is provided by <a href="https://techxplore.com" target="_blank" rel="noreferrer">Tech Xplore</a>
+</div>
+
 
 @if (articles == null)
 {

@@ -26,7 +26,7 @@ else
         @foreach (var article in articles)
         {
             <div class="article-item ps-2 pe-2">
-                <h2>@article.Title</h2>
+                <h3>@article.Title</h3>
                 <p>@article.Description</p>
                 <p><a href="@article.Link" target="_blank">Read more</a></p>
                 @if (!string.IsNullOrEmpty(article.Thumbnail))

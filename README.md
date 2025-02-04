@@ -1,4 +1,4 @@
-<h3>The Latest News and Updates on Machine Learning and AI</h3>
+<h3>The Latest News and Updates on Machine Learning and AI from Tech Xplore</h3>
 
 <b>Author:</b> Brian Ravn Pedersen, Data Engineer and Software Developer<br/>
 <b>Created:</b> 2024-10-11<br/>

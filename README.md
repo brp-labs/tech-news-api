@@ -5,8 +5,6 @@
 <b>Technologies:</b> C#, Blazor Server App, ASP.NET Core, Client API, RSS Feed Integration<br />
 <b>Workflow:</b> CI/CD-pipeline, GitHub Actions, Azure App Service<br/>
 
-<b>Check it out:</b> https://tech-news-api-dpbrgsfwa6chebg5.northeurope-01.azurewebsites.net<br/>
-
 Data used for this application is sourced from <b>Tech Xplore</b> at https://techxplore.com.
 
 <hr/>
